@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/ProjectCard.astro';
+const allProjects = await getCollection("projects");
+const allAcademics = await getCollection("academics");
+---
+<Layout title="Projects">
+    <h2>Projects</h2>
+    <ul role="list" class="link-card-grid">
+        {allProjects.reverse().map((card) => <Card 
+            href={`/projects/${card.slug}/`} 
+            image={card.data.image.url} 
+            title={card.data.title} 
+            body={card.data.description}
+        />)}
+    </ul>
+
+    <h2>Academic Work</h2>
+    <ul role="list" class="link-card-grid">
+      {allAcademics.reverse().map((card) => <Card 
+          href={`/academics/${card.slug}/`} 
+          image={card.data.image.url} 
+          title={card.data.title} 
+          body={card.data.description}
+      />)}
+  </ul>
+</Layout>
+
+<style>
+	main {
+		color: white;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
