@@ -1,12 +1,14 @@
 ---
 import { Icon } from "astro-icon/components";
 ---
+
 <footer>
+  <div>&copy; 2024 Teagan Clayton | Developed and designed with ☕</div>
   <div>
-    &copy; 2024 Teagan Clayton | Developed and designed with ☕
-  </div>
-  <div>
-    <a href="https://www.linkedin.com/in/teagan-clayton-a84546252/" aria-label="LinkedIn">
+    <a
+      href="https://www.linkedin.com/in/teagan-clayton-a84546252/"
+      aria-label="LinkedIn"
+    >
       <Icon name="linkedin" />
     </a>
     <a href="https://www.instagram.com/notosarme/" aria-label="Instagram">
@@ -19,15 +21,14 @@ import { Icon } from "astro-icon/components";
 </footer>
 
 <style>
-
-footer {
+  footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
-    font-size: .75rem;
+    padding: 2.5rem 0 1.5rem;
+    font-size: 0.75rem;
   }
-[data-icon] {
+  [data-icon] {
     font-size: 1.25rem;
     margin-left: 20px;
   }

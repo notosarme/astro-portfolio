@@ -2,80 +2,104 @@
 import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
 ---
+
 <Layout title={frontmatter.title}>
-    <div class="center">
-        <img width="500px" height="auto" src={frontmatter.image.url} alt={frontmatter.image.alt} />
-    </div>
-    <h2>{frontmatter.title}</h2>
-    <ul class="info__list">
-        <li><span class="info info__title">Platform: </span>{frontmatter.platform}</li>
-        <li><span class="info info__title">Stack: </span>{frontmatter.stack}</li>
-        <li><span class="info info__title">Website: </span><a class="info__link" href={frontmatter.website} target="_blank">{frontmatter.website}</a></li>
-        <li><span class="info info__title">Github: </span><a class="info__link" href={frontmatter.github} target="_blank">{frontmatter.github}</a></li>
-    </ul>
-    <slot />
-    <div class="center">
-        <img width="500px" height="auto" src={frontmatter.supImage1.url} alt={frontmatter.supImage1.alt} />
-        <img width="500px" height="auto" src={frontmatter.supImage2.url} alt={frontmatter.supImage2.alt} />
-    </div>
+  <div class="center">
+    <img
+      width="500px"
+      height="auto"
+      src={frontmatter.image.url}
+      alt={frontmatter.image.alt}
+    />
+  </div>
+  <h2>{frontmatter.title}</h2>
+  <ul class="info__list">
+    <li>
+      <span class="info info__title">Platform: </span>{frontmatter.platform}
+    </li>
+    <li><span class="info info__title">Stack: </span>{frontmatter.stack}</li>
+    <li>
+      <span class="info info__title">Website: </span><a
+        class="info__link"
+        href={frontmatter.website}
+        target="_blank">{frontmatter.website}</a>
+    </li>
+    <li>
+      <span class="info info__title">Github: </span><a
+        class="info__link"
+        href={frontmatter.github}
+        target="_blank">{frontmatter.github}</a>
+    </li>
+  </ul>
+  <slot />
+  <div class="center">
+    <img
+      width="500px"
+      height="auto"
+      src={frontmatter.supImage1.url}
+      alt={frontmatter.supImage1.alt}
+    />
+    <img
+      width="500px"
+      height="auto"
+      src={frontmatter.supImage2.url}
+      alt={frontmatter.supImage2.alt}
+    />
+  </div>
 </Layout>
 
 <style>
+  img {
+    border: 2px solid black;
+    border-radius: 6px;
+  }
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
 
-    img {
-        border: 2px solid black;
-        border-radius: 6px;
-    }
-    .center {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        }
-    
-    .center img {
-        max-width: 100%; 
-    }
+  .center img {
+    max-width: 100%;
+  }
 
-    ul {
-        list-style: none;
-        padding-left: 0;
-    }
-    .info {
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .info {
     background-color: #584966;
     color: #fff;
     border-radius: 6px;
     font-weight: 600;
-    font-size: .85rem;
+    font-size: 0.85rem;
     padding: 0.3em 0.6em 0.2em;
-}
+  }
 
-.info__list {
+  .info__list {
     text-indent: 1rem;
     list-style: none;
     padding: 0;
-}
+  }
 
-.info__list > li {
+  .info__list > li {
     margin-top: 10px;
-}
+  }
 
-.info__title {
+  .info__title {
     border-radius: 4px;
     font-size: 0.7rem;
     margin-right: 5px;
     padding: 0.5em 0.3em 0.3em 0.3em;
-}
+  }
 
-.info__link {
+  .info__link {
     color: var(--text-link);
     text-decoration: none;
-}
+  }
 
-.info__link:hover {
+  .info__link:hover {
     text-decoration: underline;
-}
-
-
-
+  }
 </style>
