@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/BlogCard.astro';
+---
+
+<Layout title="Blogs">
+	<div>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://www.techsculpt.blog/exploring-useless-languages/"
+				title="The usefulness of exploring so-called useless languages"
+				body="Is it worth it to join a hype bubble, when often all that built up praise and hype turns to annoyance and doubt?"
+			/>
+			<Card
+				href="https://www.techsculpt.blog/can-tech-be-too-smart-for-its-own-good/"
+				title="Can tech be too smart for its own good?"
+				body="What happens when a smart tech product solves zero problems I have, and adds in about five new problems I wouldn't have even considered before?"
+			/>
+			<Card
+				href="https://www.techsculpt.blog/foldable-phones/"
+				title="The Futuristic Retro: Design and Users of Foldable Phones"
+				body="It's now been four years since foldable phones were brought to consumer market. What considerations must be had about these devices, or will they last long enough to matter?"
+			/>
+		</ul>
+	</div>
+</Layout>
+
+<style>
+
+	main {
+		color: white;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
