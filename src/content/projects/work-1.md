@@ -3,16 +3,16 @@ title: 'The Online Indie Artists Club'
 description: 'Created a website for a volunteer-ran online artist collective.'
 imageThumb:
     url: '/images/indie-artists-0.png'
-    alt: 'f'
+    alt: 'Indie Artists Club Thumbnail'
 image:
     url: '/images/indie-artists-1.png'
-    alt: 'GitHub wallpaper'
+    alt: 'Indie Artists Club Homepage'
 supImage1:
     url: '/images/indie-artists-2.png'
-    alt: 'first image of your project.'
+    alt: 'Indie Artists Club Resource List'
 supImage2:
     url: '/images/indie-artists-3.png'
-    alt: 'second image of your project.'
+    alt: 'Indie Artists Club Zine Page'
 platform: Web
 stack: HTML, CSS, JavaScript, JSON
 website: https://indieartists.club/
