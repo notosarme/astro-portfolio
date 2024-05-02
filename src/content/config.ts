@@ -5,15 +5,19 @@ const projectsCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    imageThumb: z.object({
+      url: z.string(),
+      alt: z.string(),
+    }),
     image: z.object({
       url: z.string(),
       alt: z.string(),
     }),
-    worksImage1: z.object({
+    supImage1: z.object({
       url: z.string(),
       alt: z.string(),
     }),
-    worksImage2: z.object({
+    supImage2: z.object({
       url: z.string(),
       alt: z.string(),
     }),
@@ -29,15 +33,19 @@ const academicCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    imageThumb: z.object({
+      url: z.string(),
+      alt: z.string(),
+    }),
     image: z.object({
       url: z.string(),
       alt: z.string(),
     }),
-    worksImage1: z.object({
+    supImage1: z.object({
       url: z.string(),
       alt: z.string(),
     }),
-    worksImage2: z.object({
+    supImage2: z.object({
       url: z.string(),
       alt: z.string(),
     }),

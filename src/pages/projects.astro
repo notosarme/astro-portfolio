@@ -10,21 +10,21 @@ const allAcademics = await getCollection("academics");
     <ul role="list" class="link-card-grid">
         {allProjects.reverse().map((card) => <Card 
             href={`/projects/${card.slug}/`} 
-            image={card.data.image.url} 
+            image={card.data.imageThumb.url} 
             title={card.data.title} 
             body={card.data.description}
         />)}
     </ul>
 
-    <h2>Academic Work</h2>
-    <ul role="list" class="link-card-grid">
-      {allAcademics.reverse().map((card) => <Card 
-          href={`/academics/${card.slug}/`} 
-          image={card.data.image.url} 
-          title={card.data.title} 
-          body={card.data.description}
-      />)}
-  </ul>
+        <h2>Academic Work</h2>
+        <ul role="list" class="link-card-grid">
+        {allAcademics.reverse().map((card) => <Card 
+            href={`/academics/${card.slug}/`} 
+            image={card.data.image.url} 
+            title={card.data.title} 
+            body={card.data.description}
+        />)}
+    </ul>
 </Layout>
 
 <style>
