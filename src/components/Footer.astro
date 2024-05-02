@@ -6,11 +6,15 @@ import { Icon } from "astro-icon/components";
     &copy; 2024 Teagan Clayton | Developed and designed with ☕
   </div>
   <div>
-    <a href="https://github.com/notosarme/"><Icon name="github-round" /></a>
-    <a href="https://www.linkedin.com/in/teagan-clayton-a84546252/"
-      ><Icon name="linkedin" /></a
-    >
-    <a href="https://www.instagram.com/notosarme/"><Icon name="instagram" /></a>
+    <a href="https://www.linkedin.com/in/teagan-clayton-a84546252/" aria-label="LinkedIn">
+      <Icon name="linkedin" />
+    </a>
+    <a href="https://www.instagram.com/notosarme/" aria-label="Instagram">
+      <Icon name="instagram" />
+    </a>
+    <a href="https://github.com/notosarme/" aria-label="Github">
+      <Icon name="github-round" />
+    </a>
   </div>
 </footer>
 
@@ -26,5 +30,9 @@ footer {
 [data-icon] {
     font-size: 1.25rem;
     margin-left: 20px;
+  }
+
+  footer a {
+    text-decoration: none;
   }
 </style>
