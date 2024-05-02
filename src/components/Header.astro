@@ -1,20 +1,45 @@
 ---
+
 ---
-<h1>Welcome to <span class="text-gradient">My Blog</span></h1>
+
+<header>
+		<h1><span class="text-gradient">TJ.</span></h1>
+
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/projects">Projects</a></li>
+				<li><a href="/blog">Blog</a></li>
+			</ul>
+		</nav>
+  
+</header>
 
 <style>
-  h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+
+  nav ul li a {
+    color: purple;
+    text-decoration: none;
+  }
+  nav ul li a:hover {
+    color: #000;
+  }
+
 </style>
