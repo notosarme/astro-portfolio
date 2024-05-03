@@ -1,18 +1,54 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/BlogCard.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 ---
 
 <Layout title="TJ Clayton">
 	<div>
 		<h2>About</h2>
-		<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada lacus vel turpis euismod, ut elementum dolor bibendum. Mauris efficitur tortor sem, vitae rutrum orci consectetur dictum. Cras consequat tempus erat at tempor. Curabitur ut malesuada velit, eu lobortis mauris. Integer faucibus ex vel ultrices iaculis. Morbi mattis risus nec purus porta maximus. Curabitur molestie velit velit, eu ornare sapien volutpat vitae. Nunc pulvinar, elit suscipit fringilla placerat, nisl mauris tempor tortor, non iaculis felis quam sed lectus. Fusce justo quam, vulputate quis ornare sed, egestas semper mauris. Aenean vitae efficitur sem. Nullam porta eros convallis iaculis malesuada. Morbi ac lacus scelerisque, vehicula est quis, scelerisque quam. Mauris id turpis nec est condimentum fermentum. </p>
+		<p>
+      I'm Teagan, a junior developer currently based in the Canadian Maritimes. 
+      Graduated with a college diploma in Mobile Application Design & Development from Algonquin College in Ottawa. 
+      I specialize in responsive and accessible web design including mobile-first website development. 
+    </p>
+    <p>
+      I have a background in interdisciplinary arts and still have a passion for the scene which can be seen in my projects. 
+      I also have a passion for retro technology.  
+      This background gives me a particular interest in creative, user friendly solutions, and making the most out of limitations.
+    </p>
+    <p class="no-spacing">
+      <a href="">Download my resume.</a>
+    </p>
 		<h2>Highlights</h2>
-		<p></p>
+    <ul role="list" class="link-card-grid">
+      <ProjectCard
+        image="/public/images/indie-artists-0.png" 
+        href="/projects/work-1/"
+        title="Indie Artists Club"
+        body="Test"
+      />
+      <ProjectCard
+        image="/public/images/indie-artists-0.png" 
+        href="/projects/work-1/"
+        title="Indie Artists Club"
+        body="Test"
+      />
+      <p class="no-spacing"><a href="/projects/">See all projects.</a></p>
+    </ul>
 		<h2>Skills</h2>
 		<p></p>
 		<h2>Now</h2>
-		<p>Donec posuere viverra mi id hendrerit. Sed vehicula, erat ac ornare laoreet, urna dui fringilla dui, quis sodales urna nulla a massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla lectus tellus, luctus id ultricies quis, auctor vitae erat. Quisque eget libero feugiat, fermentum odio eu, ornare augue. Pellentesque ullamcorper leo sed aliquet auctor. Quisque vulputate venenatis aliquet. Nulla sit amet odio dignissim, malesuada ex ac, pulvinar sapien.</p>
+    <p>
+      Now that I've graduated, I've been busy making the move back home. 
+      Catching up, looking for a place to live and work, all that jazz. 
+      I took on some work-trade projects in order to practice my skills further, 
+      and have been looking into some other small projects to practice new things. 
+      Most recently, I've been learning TypeScript (all around useful) 
+      and Astro (which is fun, lightweight, and is what this site is built with!).
+    </p>
+		<p class="no-spacing">
+      <a href="https://nownownow.com/about" target="_blank">Why now?</a>
+    </p>
 	</div>
 </Layout>
 
@@ -39,10 +75,17 @@ import Card from '../components/BlogCard.astro';
 	.instructions strong {
 		color: rgb(var(--accent-light));
 	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+
+  .no-spacing {
+    margin: 0;
+    padding: 0;
+  }
+
+  .no-spacing a {
+    text-decoration: none;
+  }
+
+  .no-spacing a:hover {
+    text-decoration: underline;
+  }
 </style>
