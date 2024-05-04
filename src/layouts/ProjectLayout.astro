@@ -15,17 +15,17 @@ const { frontmatter } = Astro.props;
   <h2>{frontmatter.title}</h2>
   <ul class="info__list">
     <li>
-      <span class="info info__title">Platform: </span>{frontmatter.platform}
+      <span class="info info__title">Platform</span>{frontmatter.platform}
     </li>
-    <li><span class="info info__title">Stack: </span>{frontmatter.stack}</li>
+    <li><span class="info info__title">Stack</span>{frontmatter.stack}</li>
     <li>
-      <span class="info info__title">Website: </span><a
+      <span class="info info__title">View</span><a
         class="info__link"
         href={frontmatter.website}
         target="_blank">{frontmatter.website}</a>
     </li>
     <li>
-      <span class="info info__title">Github: </span><a
+      <span class="info info__title">More</span><a
         class="info__link"
         href={frontmatter.github}
         target="_blank">{frontmatter.github}</a>
