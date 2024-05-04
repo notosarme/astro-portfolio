@@ -22,9 +22,9 @@ import { Icon } from "astro-icon/components";
         creative, user friendly solutions, and making the most out of
         limitations.
       </p>
-      <div class="button">
+      <p class="no-spacing">
         <a href="">Download my resume.</a>
-      </div>
+      </p>
     </div>
 
     <div id="highlights">
@@ -33,14 +33,14 @@ import { Icon } from "astro-icon/components";
         <ProjectCard
           image="/images/ingenium-0.png"
           href="/projects/work-2/"
-          title="Ingenium Wayfinding App"
-          body="Test"
+          title="Wayfinding App for the Visually Impaired"
+          body="PWA developed for the Canadian Aviation and Space Museum."
         />
         <ProjectCard
           image="/images/indie-artists-0.png"
           href="/projects/work-1/"
-          title="Indie Artists Club"
-          body="Test"
+          title="The Online Indie Artists Club"
+          body="Created a website for a volunteer-ran online artist collective."
         />
       </ul>
       <p class="no-spacing"><a href="/projects/">See all projects.</a></p>
@@ -145,6 +145,7 @@ import { Icon } from "astro-icon/components";
 
   .no-spacing a {
     text-decoration: none;
+    font-weight: bold;
   }
 
   .no-spacing a:hover {
