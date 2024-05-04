@@ -6,39 +6,46 @@ import { Icon } from "astro-icon/components";
 
 <Layout title="TJ Clayton">
   <div>
-    <h2>About</h2>
-    <p>
-      I'm Teagan, a junior developer currently based in the Canadian Maritimes.
-      Graduated with a college diploma in Mobile Application Design &
-      Development from Algonquin College in Ottawa. I specialize in
-      cross-platform, responsive, and accessible web design, including
-      mobile-first website development.
-    </p>
-    <p>
-      I have a background in interdisciplinary arts and still have a passion for
-      the scene which can be seen in my projects. I also have a passion for
-      retro technology. This background gives me a particular interest in
-      creative, user friendly solutions, and making the most out of limitations.
-    </p>
-    <div class="instructions">
-      <a href="">Download my resume.</a>
+    <div id="about">
+      <h2>About</h2>
+      <p>
+        I'm Teagan, a junior developer currently based in the Canadian
+        Maritimes. Graduated with a college diploma in Mobile Application Design
+        & Development from Algonquin College in Ottawa. I specialize in
+        cross-platform, responsive, and accessible web design, including
+        mobile-first website development.
+      </p>
+      <p>
+        I have a background in interdisciplinary arts and still have a passion
+        for the scene which can be seen in my projects. I also have a passion
+        for retro technology. This background gives me a particular interest in
+        creative, user friendly solutions, and making the most out of
+        limitations.
+      </p>
+      <div class="button">
+        <a href="">Download my resume.</a>
+      </div>
     </div>
-    <h2>Highlights</h2>
-    <ul role="list" class="link-card-grid">
-      <ProjectCard
-        image="/images/indie-artists-0.png"
-        href="/projects/work-1/"
-        title="Indie Artists Club"
-        body="Test"
-      />
-      <ProjectCard
-        image="/images/indie-artists-0.png"
-        href="/projects/work-1/"
-        title="Indie Artists Club"
-        body="Test"
-      />
-      <p class="no-spacing"><a href="/projects/">See all projects.</a></p>
-    </ul>
+
+    <div id="highlights">
+      <h2>Highlights</h2>
+      <ul role="list" class="link-card-grid">
+        <ProjectCard
+          image="/images/indie-artists-0.png"
+          href="/projects/work-1/"
+          title="Indie Artists Club"
+          body="Test"
+        />
+        <ProjectCard
+          image="/images/indie-artists-0.png"
+          href="/projects/work-1/"
+          title="Indie Artists Club"
+          body="Test"
+        />
+        <p class="no-spacing"><a href="/projects/">See all projects.</a></p>
+      </ul>
+    </div>
+
     <div id="skills">
       <h2>Skills</h2>
 
@@ -81,19 +88,21 @@ import { Icon } from "astro-icon/components";
       <Icon name="stacks/figma" />
       <Icon name="stacks/wordpress" />
     </div>
-    <h3></h3>
-    <h2>Now</h2>
-    <p>
-      Now that I've graduated, I've been busy making the move back home.
-      Catching up, looking for a place to live and work, all that jazz. I took
-      on some work-trade projects in order to practice my skills further, and
-      have been looking into some other small projects to practice new things.
-      Most recently, I've been learning TypeScript (all around useful) and Astro
-      (which is fun, lightweight, and is what this site is built with!).
-    </p>
-    <p class="no-spacing">
-      <a href="https://nownownow.com/about" target="_blank">Why now?</a>
-    </p>
+
+    <div id="now">
+      <h2>Now</h2>
+      <p>
+        Now that I've graduated, I've been busy making the move back home.
+        Catching up, looking for a place to live and work, all that jazz. I took
+        on some work-trade projects in order to practice my skills further, and
+        have been looking into some other small projects to practice new things.
+        Most recently, I've been learning TypeScript (all around useful) and
+        Astro (which is fun, lightweight, and is what this site is built with!).
+      </p>
+      <p class="no-spacing">
+        <a href="https://nownownow.com/about" target="_blank">Why now?</a>
+      </p>
+    </div>
   </div>
 </Layout>
 
@@ -111,15 +120,12 @@ import { Icon } from "astro-icon/components";
       rgba(var(--accent-dark), 60%)
     );
     background-repeat: no-repeat;
-    background-size: 100% 0.5em;
+    background-size: 100% 0.48em;
     background-position: 0 90%;
     transition: background-size 0.25s ease-in;
-    &:hover {
-      background-size: 100% 88%;
-    }
   }
 
-  .instructions {
+  .button {
     border: 1px solid rgba(var(--accent-light), 25%);
     background: linear-gradient(
       rgba(var(--accent-dark), 66%),
@@ -130,14 +136,14 @@ import { Icon } from "astro-icon/components";
     width: fit-content;
   }
 
-  .instructions a {
+  .button a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     text-shadow: black 2px 2px 4px;
   }
 
-  .instructions a:hover {
+  .button a:hover {
     text-decoration: underline;
   }
 
@@ -158,6 +164,14 @@ import { Icon } from "astro-icon/components";
     padding-top: 1rem;
   }
   h3:first-of-type {
+    padding-top: 0;
+  }
+
+  h2 {
+    padding-top: 2rem;
+  }
+
+  h2:first-of-type {
     padding-top: 0;
   }
 </style>
