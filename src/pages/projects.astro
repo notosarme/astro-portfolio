@@ -14,7 +14,7 @@ const allAcademics = await getCollection("academics");
         .reverse()
         .map((card) => (
           <Card
-            href={`/projects/${card.slug}/`}
+            href={`/portfolio/projects/${card.slug}/`}
             image={card.data.imageThumb.url}
             title={card.data.title}
             body={card.data.description}
@@ -30,7 +30,7 @@ const allAcademics = await getCollection("academics");
         .reverse()
         .map((card) => (
           <Card
-            href={`/academics/${card.slug}/`}
+            href={`/portfolio/academics/${card.slug}/`}
             image={card.data.image.url}
             title={card.data.title}
             body={card.data.description}
