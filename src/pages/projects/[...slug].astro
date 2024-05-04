@@ -5,7 +5,7 @@ export const prerender = true;
 
 export async function getStaticPaths() {
     const projectEntries = await getCollection('projects');
-    return projectEntries.map(entry => ({
+    return projectEntries.reverse().map(entry => ({
         params: { slug: entry.slug }, props: { entry },
   }));
 }
