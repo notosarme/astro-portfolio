@@ -1,80 +1,145 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import ProjectCard from '../components/ProjectCard.astro';
+import Layout from "../layouts/Layout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <Layout title="TJ Clayton">
-	<div>
-		<h2>About</h2>
-		<p>
-      I'm Teagan, a junior developer currently based in the Canadian Maritimes. 
-      Graduated with a college diploma in Mobile Application Design & Development from Algonquin College in Ottawa. 
-      I specialize in responsive and accessible web design including mobile-first website development. 
+  <div>
+    <h2>About</h2>
+    <p>
+      I'm Teagan, a junior developer currently based in the Canadian Maritimes.
+      Graduated with a college diploma in Mobile Application Design &
+      Development from Algonquin College in Ottawa. I specialize in
+      cross-platform, responsive, and accessible web design, including
+      mobile-first website development.
     </p>
     <p>
-      I have a background in interdisciplinary arts and still have a passion for the scene which can be seen in my projects. 
-      I also have a passion for retro technology.  
-      This background gives me a particular interest in creative, user friendly solutions, and making the most out of limitations.
+      I have a background in interdisciplinary arts and still have a passion for
+      the scene which can be seen in my projects. I also have a passion for
+      retro technology. This background gives me a particular interest in
+      creative, user friendly solutions, and making the most out of limitations.
     </p>
-    <p class="no-spacing">
+    <div class="instructions">
       <a href="">Download my resume.</a>
-    </p>
-		<h2>Highlights</h2>
+    </div>
+    <h2>Highlights</h2>
     <ul role="list" class="link-card-grid">
       <ProjectCard
-        image="/public/images/indie-artists-0.png" 
+        image="/images/indie-artists-0.png"
         href="/projects/work-1/"
         title="Indie Artists Club"
         body="Test"
       />
       <ProjectCard
-        image="/public/images/indie-artists-0.png" 
+        image="/images/indie-artists-0.png"
         href="/projects/work-1/"
         title="Indie Artists Club"
         body="Test"
       />
       <p class="no-spacing"><a href="/projects/">See all projects.</a></p>
     </ul>
-		<h2>Skills</h2>
-		<p></p>
-		<h2>Now</h2>
+    <div id="skills">
+      <h2>Skills</h2>
+
+      <h3>Stacks</h3>
+      <p>
+        These are the ones that I use most often, enjoy, or have completed
+        projects in that can be seen in my portfolio.
+      </p>
+      <div>
+        <Icon name="stacks/html" />
+        <Icon name="stacks/css" />
+        <Icon name="stacks/javascript" />
+        <Icon name="stacks/react" />
+        <Icon name="stacks/vite" />
+        <Icon name="stacks/astro" />
+        <Icon name="stacks/flutter" />
+        <Icon name="stacks/swift" />
+        <Icon name="stacks/bun" />
+      </div>
+      <p>MERN</p>
+
+      <h3>Experimented Stacks</h3>
+      <p>
+        Ones I have done small projects in and would like to expand on further.
+      </p>
+      <Icon name="stacks/java" />
+      <Icon name="stacks/c" />
+      <Icon name="stacks/cplusplus" />
+      <Icon name="stacks/csharp" />
+      <Icon name="stacks/kotlin" />
+      <Icon name="stacks/sass" />
+
+      <h3>Programs</h3>
+      <Icon name="stacks/git" />
+      <Icon name="stacks/github" />
+      <Icon name="stacks/vscode" />
+      <Icon name="stacks/visualstudio" />
+      <Icon name="stacks/xcode" />
+      <Icon name="stacks/androidstudio" />
+      <Icon name="stacks/figma" />
+      <Icon name="stacks/wordpress" />
+    </div>
+    <h3></h3>
+    <h2>Now</h2>
     <p>
-      Now that I've graduated, I've been busy making the move back home. 
-      Catching up, looking for a place to live and work, all that jazz. 
-      I took on some work-trade projects in order to practice my skills further, 
-      and have been looking into some other small projects to practice new things. 
-      Most recently, I've been learning TypeScript (all around useful) 
-      and Astro (which is fun, lightweight, and is what this site is built with!).
+      Now that I've graduated, I've been busy making the move back home.
+      Catching up, looking for a place to live and work, all that jazz. I took
+      on some work-trade projects in order to practice my skills further, and
+      have been looking into some other small projects to practice new things.
+      Most recently, I've been learning TypeScript (all around useful) and Astro
+      (which is fun, lightweight, and is what this site is built with!).
     </p>
-		<p class="no-spacing">
+    <p class="no-spacing">
       <a href="https://nownownow.com/about" target="_blank">Why now?</a>
     </p>
-	</div>
+  </div>
 </Layout>
 
 <style>
+  [data-icon] {
+    font-size: 4rem;
+    margin-right: 12px;
+  }
 
-	main {
-		color: white;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
+  h2 {
+    width: fit-content;
+    padding: 0 0.5em;
+    background-image: linear-gradient(
+      rgba(var(--accent-dark), 30%),
+      rgba(var(--accent-dark), 60%)
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 0.5em;
+    background-position: 0 90%;
+    transition: background-size 0.25s ease-in;
+    &:hover {
+      background-size: 100% 88%;
+    }
+  }
+
+  .instructions {
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    padding: 1rem;
+    border-radius: 8px;
+    width: fit-content;
+  }
+
+  .instructions a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: black 2px 2px 4px;
+  }
+
+  .instructions a:hover {
+    text-decoration: underline;
+  }
 
   .no-spacing {
     margin: 0;
@@ -87,5 +152,12 @@ import ProjectCard from '../components/ProjectCard.astro';
 
   .no-spacing a:hover {
     text-decoration: underline;
+  }
+
+  h3 {
+    padding-top: 1rem;
+  }
+  h3:first-of-type {
+    padding-top: 0;
   }
 </style>
