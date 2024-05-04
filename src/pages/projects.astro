@@ -1,47 +1,34 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../layouts/Layout.astro";
-import Card from "../components/ProjectCard.astro";
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/ProjectCard.astro';
 const allProjects = await getCollection("projects");
 const allAcademics = await getCollection("academics");
 ---
-
 <Layout title="Projects">
-  <h2 class="underline">Projects</h2>
-  <ul role="list" class="link-card-grid">
-    {
-      allProjects
-        .reverse()
-        .map((card) => (
-          <Card
-            href={`/portfolio/projects/${card.slug}/`}
-            image={card.data.imageThumb.url}
-            title={card.data.title}
+    <h2 class="underline">Projects</h2>
+    <ul role="list" class="link-card-grid">
+        {allProjects.reverse().map((card) => <Card 
+            href={`/projects/${card.slug}/`} 
+            image={card.data.imageThumb.url} 
+            title={card.data.title} 
             body={card.data.description}
-          />
-        ))
-    }
-  </ul>
+        />)}
+    </ul>
 
-  <h2 class="underline">Academic Work</h2>
-  <ul role="list" class="link-card-grid">
-    {
-      allAcademics
-        .reverse()
-        .map((card) => (
-          <Card
-            href={`/portfolio/academics/${card.slug}/`}
-            image={card.data.image.url}
-            title={card.data.title}
+        <h2 class="underline">Academic Work</h2>
+        <ul role="list" class="link-card-grid">
+        {allAcademics.reverse().map((card) => <Card 
+            href={`/academics/${card.slug}/`} 
+            image={card.data.image.url} 
+            title={card.data.title} 
             body={card.data.description}
-          />
-        ))
-    }
-  </ul>
+        />)}
+    </ul>
 </Layout>
 
 <style>
-  main {
-    color: white;
-  }
+	main {
+		color: white;
+	}
 </style>
