@@ -93,4 +93,17 @@ const { title } = Astro.props;
 		gap: 2rem;
 		padding: 0;
 	}
+
+  .underline {
+    width: fit-content;
+    padding: 0 0.5em;
+    background-image: linear-gradient(
+      rgba(var(--accent-dark), 30%),
+      rgba(var(--accent-dark), 60%)
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 0.48em;
+    background-position: 0 90%;
+    transition: background-size 0.25s ease-in;
+  }
 </style>

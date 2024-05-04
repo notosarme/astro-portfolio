@@ -7,7 +7,7 @@ import { Icon } from "astro-icon/components";
 <Layout title="TJ Clayton">
   <div>
     <div id="about">
-      <h2>About</h2>
+      <h2 class="underline">About</h2>
       <p>
         I'm Teagan, a junior developer currently based in the Canadian
         Maritimes. Graduated with a college diploma in Mobile Application Design
@@ -28,7 +28,7 @@ import { Icon } from "astro-icon/components";
     </div>
 
     <div id="highlights">
-      <h2>Highlights</h2>
+      <h2 class="underline">Highlights</h2>
       <ul role="list" class="link-card-grid">
         <ProjectCard
           image="/images/indie-artists-0.png"
@@ -47,7 +47,7 @@ import { Icon } from "astro-icon/components";
     </div>
 
     <div id="skills">
-      <h2>Skills</h2>
+      <h2 class="underline">Skills</h2>
 
       <h3>Stacks</h3>
       <p>
@@ -90,7 +90,7 @@ import { Icon } from "astro-icon/components";
     </div>
 
     <div id="now">
-      <h2>Now</h2>
+      <h2 class="underline">Now</h2>
       <p>
         Now that I've graduated, I've been busy making the move back home.
         Catching up, looking for a place to live and work, all that jazz. I took
@@ -112,19 +112,10 @@ import { Icon } from "astro-icon/components";
     margin-right: 12px;
   }
 
-  h2 {
-    width: fit-content;
-    padding: 0 0.5em;
-    background-image: linear-gradient(
-      rgba(var(--accent-dark), 30%),
-      rgba(var(--accent-dark), 60%)
-    );
-    background-repeat: no-repeat;
-    background-size: 100% 0.48em;
-    background-position: 0 90%;
-    transition: background-size 0.25s ease-in;
+  #highlights, #skills, #now {
+    margin-top: 3rem;
   }
-
+  
   .button {
     border: 1px solid rgba(var(--accent-light), 25%);
     background: linear-gradient(
@@ -164,14 +155,6 @@ import { Icon } from "astro-icon/components";
     padding-top: 1rem;
   }
   h3:first-of-type {
-    padding-top: 0;
-  }
-
-  h2 {
-    padding-top: 2rem;
-  }
-
-  h2:first-of-type {
     padding-top: 0;
   }
 </style>
