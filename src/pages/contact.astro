@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout title="Contact Me">
+  <div>
+    <h2 class="underline">Contact</h2>
+
+    <ul>
+      <li>
+        <a href="https://github.com/notosarme/" aria-label="Github">
+          <Icon name="github-round" />Github:</a> notosarme
+        
+      </li>
+
+      <li>
+        <a href="https://www.instagram.com/notosarme/" aria-label="Instagram">
+          <Icon name="instagram" />Instagram:</a> notosarme
+        
+      </li>
+
+      <li>
+        <a
+          href="https://www.linkedin.com/in/teagan-clayton"
+          aria-label="LinkedIn"
+        >
+          <Icon name="linkedin" />LinkedIn:</a> teagan-clayton
+        
+      </li>
+
+      <li>
+        <a href="mailto:clayton.tjc@gmail.com" aria-label="Email">
+          <Icon name="email" />Email:</a> clayton.tjc@gmail.com
+        
+      </li>
+
+    </ul>
+  </div>
+</Layout>
+
+<style>
+  main {
+    color: white;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul li {
+    margin-bottom: .5rem; 
+    font-size: 1.05rem;
+  }
+
+  ul li a {
+    color: #000;
+    transition: 0.25s;
+  }
+  ul li a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  [data-icon] {
+    padding-right: .5rem; /* Space between icon and text */
+  }
+</style>
