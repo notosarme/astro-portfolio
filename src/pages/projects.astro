@@ -17,14 +17,21 @@ const allAcademics = await getCollection("academics");
     </ul>
 
         <h2 class="underline">Academic Work</h2>
-        <ul role="list" class="link-card-grid">
+        <p>A WIP section right now. Some major school projects I've completed are:</p>
+        <ul>
+          <li>A wishlist creating app done in React, React Native, and Flutter (to learn the differences).</li>
+          <li>A movie voting app created in Flutter, where you enter a code, connect to another instance, and swipe until you find a match.</li>
+          <li>An iOS app created in Swift that uses the Ottawa public building JSON list to allow users to find places to visit based on category, amenity, or location.</li>
+          <li>A .NET Maui program that allows users to upload or take pictures, and uses AI to read the image and use TTS to explain what it is.</li>
+        </ul>
+        <!-- <ul role="list" class="link-card-grid">
         {allAcademics.reverse().map((card) => <Card 
             href={`/academics/${card.slug}/`} 
             image={card.data.image.url} 
             title={card.data.title} 
             body={card.data.description}
         />)}
-    </ul>
+    </ul> -->
 </Layout>
 
 <style>
