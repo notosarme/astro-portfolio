@@ -16,7 +16,6 @@ supImage2:
 platform: Web
 stack: HTML, CSS, JavaScript, JSON
 website: https://indieartists.club/
-github: https://github.com/notosarme/indieartistsclub
 ---
 
 A website that spawned from a collective that wanted to create a simple resource hub, as artistic resources of this sort are often very scattered online. One of the main things is that they wished to keep the website as "vanilla" and lightweight as possible, for three main reasons:
